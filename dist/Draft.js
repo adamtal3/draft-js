@@ -11540,22 +11540,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
+	 * Copyright (c) Facebook, Inc. and its affiliates.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
 	 *
-	 * @providesModule insertTextIntoContentState
 	 * @format
-	 * 
+	 *  strict-local
+	 * @emails oncall+draft_js
 	 */
 
 	'use strict';
 
 	var Immutable = __webpack_require__(2);
-
 	var insertIntoList = __webpack_require__(55);
 	var invariant = __webpack_require__(1);
 
@@ -11565,8 +11562,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	function insertTextIntoContentState(contentState, selectionState, text, characterMetadata) {
 	  !selectionState.isCollapsed() ?  true ? invariant(false, '`insertText` should only be called with a collapsed range.') : invariant(false) : void 0;
 
-	  var len = text.length;
-	  if (!len) {
+	  var len = null;
+	  if (text != null) {
+	    len = text.length;
+	  }
+
+	  if (len == null || len === 0) {
 	    return contentState;
 	  }
 
