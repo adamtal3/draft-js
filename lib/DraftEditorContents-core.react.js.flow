@@ -17,6 +17,7 @@ import type { BlockNodeRecord } from './BlockNodeRecord';
 import type { DraftBlockRenderMap } from './DraftBlockRenderMap';
 import type { DraftInlineStyle } from './DraftInlineStyle';
 import type { BidiDirection } from 'fbjs/lib/UnicodeBidiDirection';
+import type { BlockKeyMap } from './BlockKeyMap';
 
 const DraftEditorBlock = require('./DraftEditorBlock.react');
 const DraftOffsetKey = require('./DraftOffsetKey');
@@ -36,6 +37,7 @@ type Props = {
   editorKey?: string;
   editorState: EditorState;
   textDirectionality?: BidiDirection;
+  blockKeyMap: BlockKeyMap;
 };
 
 /**
@@ -76,8 +78,16 @@ class DraftEditorContents extends React.Component<Props> {
     const prevDirectionMap = prevEditorState.getDirectionMap();
     const nextDirectionMap = nextEditorState.getDirectionMap();
 
+    const prevBlockKeyMap = this.props.blockKeyMap;
+    const nextBlockKeyMap = nextProps.blockKeyMap;
+
     // Text direction has changed for one or more blocks. We must re-render.
     if (prevDirectionMap !== nextDirectionMap) {
+      return true;
+    }
+
+    // blockKeyMap has chaged. We must re-render on block level.
+    if (prevBlockKeyMap !== nextBlockKeyMap) {
       return true;
     }
 
@@ -115,7 +125,8 @@ class DraftEditorContents extends React.Component<Props> {
       customStyleFn,
       editorState,
       editorKey,
-      textDirectionality
+      textDirectionality,
+      blockKeyMap
     } = this.props;
 
     const content = editorState.getCurrentContent();
@@ -158,7 +169,8 @@ class DraftEditorContents extends React.Component<Props> {
         key,
         offsetKey,
         selection,
-        tree: editorState.getBlockTree(key)
+        tree: editorState.getBlockTree(key),
+        key: `${key}-${blockKeyMap.get(key) || '0'}`
       };
 
       const configForType = blockRenderMap.get(blockType) || blockRenderMap.get('unstyled');
@@ -195,7 +207,7 @@ class DraftEditorContents extends React.Component<Props> {
         };
       }
 
-      const child = React.createElement(Element, childProps, <Component {...componentProps} />);
+      const child = React.createElement(Element, childProps, <Component {...componentProps} key={key} />);
 
       processedBlocks.push({
         block: child,

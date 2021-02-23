@@ -17,7 +17,7 @@
 		exports["Draft"] = factory(require("immutable"), require("react"), require("react-dom"));
 	else
 		root["Draft"] = factory(root["Immutable"], root["React"], root["ReactDOM"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_20__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_20__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -139,6 +139,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -196,12 +202,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = invariant;
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -229,7 +229,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var BlockTree = __webpack_require__(38);
 	var ContentState = __webpack_require__(25);
 	var EditorBidiService = __webpack_require__(81);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 	var SelectionState = __webpack_require__(15);
 
 	var OrderedSet = Immutable.OrderedSet,
@@ -789,14 +789,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	var CharacterMetadata = __webpack_require__(5);
 	var ContentStateInlineStyle = __webpack_require__(66);
 	var DraftFeatureFlags = __webpack_require__(12);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var applyEntityToContentState = __webpack_require__(85);
 	var getCharacterRemovalRange = __webpack_require__(106);
 	var getContentStateFragment = __webpack_require__(23);
 	var insertFragmentIntoContentState = __webpack_require__(111);
 	var insertTextIntoContentState = __webpack_require__(112);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var modifyBlockForContentState = __webpack_require__(123);
 	var removeEntitiesAtEdges = __webpack_require__(59);
 	var removeRangeFromContentState = __webpack_require__(125);
@@ -957,7 +957,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _require = __webpack_require__(2),
+	var _require = __webpack_require__(1),
 	    Map = _require.Map,
 	    OrderedSet = _require.OrderedSet,
 	    Record = _require.Record;
@@ -1084,7 +1084,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var CharacterMetadata = __webpack_require__(5);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var findRangesImmutable = __webpack_require__(18);
 
@@ -1635,7 +1635,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var CharacterMetadata = __webpack_require__(5);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var findRangesImmutable = __webpack_require__(18);
 
@@ -1802,7 +1802,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	// These two ranges are consecutive so anything in [HIGH_START, LOW_END] is a
 	// surrogate code unit.
@@ -2024,7 +2024,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var Record = Immutable.Record;
 
@@ -2201,7 +2201,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var OrderedMap = Immutable.OrderedMap;
 
@@ -2342,9 +2342,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 
 	var DraftEntityInstance = __webpack_require__(41);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var Map = Immutable.Map;
 
@@ -2688,7 +2688,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var ContentBlockNode = __webpack_require__(6);
 	var DraftEntity = __webpack_require__(21);
 	var DraftFeatureFlags = __webpack_require__(12);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 	var SelectionState = __webpack_require__(15);
 
 	var generateRandomKey = __webpack_require__(10);
@@ -2879,7 +2879,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _require = __webpack_require__(2),
+	var _require = __webpack_require__(1),
 	    Map = _require.Map;
 
 	var React = __webpack_require__(14);
@@ -3301,7 +3301,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var NEUTRAL = 'NEUTRAL'; // No strong direction
 	var LTR = 'LTR'; // Left-to-Right direction
@@ -3534,7 +3534,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var emptyFunction = __webpack_require__(36);
 	var findRangesImmutable = __webpack_require__(18);
@@ -3717,7 +3717,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var getElementPosition = __webpack_require__(138);
 	var getScrollPosition = __webpack_require__(37);
 	var getViewportDimensions = __webpack_require__(142);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var nullthrows = __webpack_require__(8);
 
 	var SCROLL_BUFFER = 10;
@@ -3912,7 +3912,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var Record = Immutable.Record;
 
@@ -4395,9 +4395,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var DefaultDraftBlockRenderMap = __webpack_require__(26);
 	var DraftEntity = __webpack_require__(21);
 	var DraftFeatureFlags = __webpack_require__(12);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
-	var _require = __webpack_require__(2),
+	var _require = __webpack_require__(1),
 	    Set = _require.Set;
 
 	var URI = __webpack_require__(131);
@@ -4405,7 +4405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var cx = __webpack_require__(16);
 	var generateRandomKey = __webpack_require__(10);
 	var getSafeBodyFromHTML = __webpack_require__(51);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var sanitizeDraftText = __webpack_require__(31);
 
 	var experimentalTreeDataSupport = DraftFeatureFlags.draft_tree_data_support;
@@ -5171,7 +5171,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var findAncestorOffsetKey = __webpack_require__(28);
 	var getSelectionOffsetKeyForNode = __webpack_require__(52);
 	var getUpdatedSelectionState = __webpack_require__(54);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var nullthrows = __webpack_require__(8);
 
 	/**
@@ -5449,7 +5449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var UserAgent = __webpack_require__(9);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var isChrome = UserAgent.isBrowser('Chrome');
 
@@ -5517,7 +5517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var UserAgent = __webpack_require__(9);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var isOldIE = UserAgent.isBrowser('IE <= 9');
 
@@ -5601,7 +5601,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var TEXT_CLIPPING_REGEX = /\.textClipping$/;
 
@@ -5913,7 +5913,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var ContentBlockNode = __webpack_require__(6);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var generateRandomKey = __webpack_require__(10);
 
@@ -6033,7 +6033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var CharacterMetadata = __webpack_require__(5);
 
 	var findRangesImmutable = __webpack_require__(18);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	function removeEntitiesAtEdges(contentState, selectionState) {
 	  var blockMap = contentState.getBlockMap();
@@ -6455,7 +6455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var UnicodeBidiDirection = __webpack_require__(34);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	/**
 	 * RegExp ranges of characters with a *Strong* Bidi_Class value.
@@ -6659,7 +6659,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var DraftFeatureFlags = __webpack_require__(12);
 	var DraftModifier = __webpack_require__(4);
 	var EditorState = __webpack_require__(3);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 	var SelectionState = __webpack_require__(15);
 
 	var generateRandomKey = __webpack_require__(10);
@@ -6784,7 +6784,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var List = Immutable.List;
 
@@ -6903,7 +6903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var CharacterMetadata = __webpack_require__(5);
 
-	var _require = __webpack_require__(2),
+	var _require = __webpack_require__(1),
 	    Map = _require.Map;
 
 	var ContentStateInlineStyle = {
@@ -7008,8 +7008,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var generateRandomKey = __webpack_require__(10);
 	var getDefaultKeyBinding = __webpack_require__(46);
 	var getScrollPosition = __webpack_require__(37);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var nullthrows = __webpack_require__(8);
+
+	var _require = __webpack_require__(1),
+	    Map = _require.Map;
 
 	var isIE = UserAgent.isBrowser('IE');
 
@@ -7035,6 +7038,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var DraftEditor = function (_React$Component) {
 	  _inherits(DraftEditor, _React$Component);
 
+	  /**
+	   * Define proxies that can route events to the current handler.
+	   */
 	  function DraftEditor(props) {
 	    _classCallCheck(this, DraftEditor);
 
@@ -7097,6 +7103,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    };
 
+	    _this.restoreBlockDOM = function (key, scrollPosition) {
+	      var blockKeyMap = _this.state.blockKeyMap;
+
+	      _this.setState({
+	        blockKeyMap: blockKeyMap.set(key, blockKeyMap.has(key) ? blockKeyMap.get(key) + 1 : 1)
+	      }, function () {
+	        _this.focus(scrollPosition);
+	      });
+	    };
+
 	    _this.setClipboard = function (clipboard) {
 	      _this._clipboard = clipboard;
 	    };
@@ -7155,8 +7171,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return _this._editorKey;
 	    };
 
-	    // See `restoreEditorDOM()`.
-	    _this.state = { contentsKey: 0 };
+	    // See `restoreEditorDOM()` and `restoreBlockDOM()`
+	    _this.state = { contentsKey: 0, blockKeyMap: new Map({}) };
 	    return _this;
 	  }
 
@@ -7164,11 +7180,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * Build a method that will pass the event to the specified handler method.
 	   * This allows us to look up the correct handler function for the current
 	   * editor mode, if any has been specified.
-	   */
-
-
-	  /**
-	   * Define proxies that can route events to the current handler.
 	   */
 
 
@@ -7214,6 +7225,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        readOnly = _props.readOnly,
 	        textAlignment = _props.textAlignment,
 	        textDirectionality = _props.textDirectionality;
+	    var _state = this.state,
+	        contentsKey = _state.contentsKey,
+	        blockKeyMap = _state.blockKeyMap;
 
 
 	    var rootClass = cx({
@@ -7246,7 +7260,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      editorKey: this._editorKey,
 	      editorState: editorState,
 	      key: 'contents' + this.state.contentsKey,
-	      textDirectionality: textDirectionality
+	      textDirectionality: textDirectionality,
+	      blockKeyMap: blockKeyMap
 	    };
 
 	    return React.createElement(
@@ -7380,6 +7395,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * the DOM state (cut command, IME) and we want to make sure that
 	   * reconciliation occurs on a version of the DOM that is synchronized with
 	   * our EditorState.
+	   */
+
+
+	  /**
+	   * Used via `this.restoreBlockDOM()`.
+	   * Force a complete re-render of the DraftEditorBlock in DraftEditorContents
+	   * Search for a block with the specified block key and re-render it.
 	   */
 
 
@@ -7539,7 +7561,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // 20ms timer expires (ex: type option-E then backspace, or type A then
 	      // backspace in 2-Set Korean), we should immediately resolve the
 	      // composition and reinterpret the key press in edit mode.
-	      DraftEditorCompositionHandler.resolveComposition(editor);
+	      DraftEditorCompositionHandler.resolveComposition(editor, e);
 	      editor._onKeyDown(e);
 	      return;
 	    }
@@ -7575,7 +7597,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * Resetting innerHTML will move focus to the beginning of the editor,
 	   * so we update to force it back to the correct place.
 	   */
-	  resolveComposition: function resolveComposition(editor) {
+	  resolveComposition: function resolveComposition(editor, e) {
 	    if (stillComposing) {
 	      return;
 	    }
@@ -7705,8 +7727,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var prevDirectionMap = prevEditorState.getDirectionMap();
 	    var nextDirectionMap = nextEditorState.getDirectionMap();
 
+	    var prevBlockKeyMap = this.props.blockKeyMap;
+	    var nextBlockKeyMap = nextProps.blockKeyMap;
+
 	    // Text direction has changed for one or more blocks. We must re-render.
 	    if (prevDirectionMap !== nextDirectionMap) {
+	      return true;
+	    }
+
+	    // blockKeyMap has chaged. We must re-render on block level.
+	    if (prevBlockKeyMap !== nextBlockKeyMap) {
 	      return true;
 	    }
 
@@ -7744,7 +7774,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        customStyleFn = _props.customStyleFn,
 	        editorState = _props.editorState,
 	        editorKey = _props.editorKey,
-	        textDirectionality = _props.textDirectionality;
+	        textDirectionality = _props.textDirectionality,
+	        blockKeyMap = _props.blockKeyMap;
 
 
 	    var content = editorState.getCurrentContent();
@@ -7789,7 +7820,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        key: key,
 	        offsetKey: offsetKey,
 	        selection: selection,
-	        tree: editorState.getBlockTree(key)
+	        tree: editorState.getBlockTree(key),
+	        key: key + '-' + (blockKeyMap.get(key) || '0')
 	      };
 
 	      var configForType = blockRenderMap.get(blockType) || blockRenderMap.get('unstyled');
@@ -7825,7 +7857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	      }
 
-	      var child = React.createElement(Element, childProps, React.createElement(Component, componentProps));
+	      var child = React.createElement(Element, childProps, React.createElement(Component, _extends({}, componentProps, { key: key })));
 
 	      processedBlocks.push({
 	        block: child,
@@ -8097,7 +8129,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var React = __webpack_require__(14);
 	var ReactDOM = __webpack_require__(20);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var setDraftEditorSelection = __webpack_require__(126);
 
 	/**
@@ -8349,7 +8381,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var ReactDOM = __webpack_require__(20);
 	var UserAgent = __webpack_require__(9);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	// In IE, spans with <br> tags render as two newlines. By rendering a span
 	// with only a newline character, we can be sure to render a single line.
@@ -8622,7 +8654,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var ContentBlock = __webpack_require__(11);
 	var ContentBlockNode = __webpack_require__(6);
 	var DraftFeatureFlags = __webpack_require__(12);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var convertFromHTMLtoContentBlocks = __webpack_require__(45);
 	var generateRandomKey = __webpack_require__(10);
@@ -8699,7 +8731,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * production systems. This file may be update/removed without notice.
 	 */
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var traverseInDepthOrder = function traverseInDepthOrder(blocks, fn) {
 	  var stack = [].concat(blocks).reverse();
@@ -8840,7 +8872,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 	var UnicodeBidiService = __webpack_require__(132);
 
 	var nullthrows = __webpack_require__(8);
@@ -9044,7 +9076,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var applyEntityToContentBlock = __webpack_require__(84);
 
@@ -9103,7 +9135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var encodeEntityRanges = __webpack_require__(103);
 	var encodeInlineStyleRanges = __webpack_require__(104);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var createRawBlock = function createRawBlock(block, entityStorageMap) {
 	  return {
@@ -9248,14 +9280,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	var DraftEntity = __webpack_require__(21);
 	var DraftFeatureFlags = __webpack_require__(12);
 	var DraftTreeAdapter = __webpack_require__(80);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 	var SelectionState = __webpack_require__(15);
 
 	var createCharacterList = __webpack_require__(88);
 	var decodeEntityRanges = __webpack_require__(89);
 	var decodeInlineStyleRanges = __webpack_require__(90);
 	var generateRandomKey = __webpack_require__(10);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var experimentalTreeDataSupport = DraftFeatureFlags.draft_tree_data_support;
 
@@ -9472,7 +9504,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var CharacterMetadata = __webpack_require__(5);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var List = Immutable.List;
 
@@ -9551,7 +9583,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var _require = __webpack_require__(2),
+	var _require = __webpack_require__(1),
 	    OrderedSet = _require.OrderedSet;
 
 	var UnicodeUtils = __webpack_require__(13);
@@ -10601,7 +10633,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var ReactDOM = __webpack_require__(20);
 
 	var getDraftEditorSelection = __webpack_require__(107);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	function editOnSelect(editor) {
 	  if (editor._blockSelectEvents || editor._latestEditorState !== editor.props.editorState) {
@@ -10770,7 +10802,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var UnicodeUtils = __webpack_require__(13);
 
 	var getRangeClientRects = __webpack_require__(50);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	/**
 	 * Return the computed line height, in pixels, for the provided element.
@@ -10967,7 +10999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var DraftEntitySegments = __webpack_require__(76);
 
 	var getRangesForDraftEntity = __webpack_require__(109);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	/**
 	 * Given a SelectionState and a removal direction, determine the entire range
@@ -11202,7 +11234,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	/**
 	 * Obtain the start and end positions of the range that has the
@@ -11300,10 +11332,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var BlockMapBuilder = __webpack_require__(17);
 	var ContentBlockNode = __webpack_require__(6);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var insertIntoList = __webpack_require__(55);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 	var randomizeBlockMapKeys = __webpack_require__(58);
 
 	var List = Immutable.List;
@@ -11552,9 +11584,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 	var insertIntoList = __webpack_require__(55);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var Repeat = Immutable.Repeat;
 
@@ -12122,7 +12154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var Map = Immutable.Map;
 
@@ -12166,10 +12198,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var ContentBlockNode = __webpack_require__(6);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var getNextDelimiterBlockKey = __webpack_require__(49);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var OrderedMap = Immutable.OrderedMap,
 	    List = Immutable.List;
@@ -12364,7 +12396,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var ContentBlockNode = __webpack_require__(6);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var getNextDelimiterBlockKey = __webpack_require__(49);
 
@@ -12678,7 +12710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var containsNode = __webpack_require__(35);
 	var getActiveElement = __webpack_require__(63);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	function getAnonymizedDOM(node, getNodeLabels) {
 	  if (!node) {
@@ -12926,10 +12958,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var ContentBlockNode = __webpack_require__(6);
-	var Immutable = __webpack_require__(2);
+	var Immutable = __webpack_require__(1);
 
 	var generateRandomKey = __webpack_require__(10);
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var List = Immutable.List,
 	    Map = Immutable.Map;
@@ -13224,7 +13256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var UnicodeBidi = __webpack_require__(62);
 	var UnicodeBidiDirection = __webpack_require__(34);
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var UnicodeBidiService = function () {
 
@@ -13375,7 +13407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	var componentRegex = /\./;
 	var orRegex = /\|\|/;
@@ -13795,7 +13827,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @typechecks
 	 */
 
-	var invariant = __webpack_require__(1);
+	var invariant = __webpack_require__(2);
 
 	/**
 	 * Convert array-like objects to arrays.

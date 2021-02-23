@@ -100,7 +100,7 @@ var DraftEditorCompositionHandler = {
       // 20ms timer expires (ex: type option-E then backspace, or type A then
       // backspace in 2-Set Korean), we should immediately resolve the
       // composition and reinterpret the key press in edit mode.
-      DraftEditorCompositionHandler.resolveComposition(editor);
+      DraftEditorCompositionHandler.resolveComposition(editor, e);
       editor._onKeyDown(e);
       return;
     }
@@ -136,7 +136,7 @@ var DraftEditorCompositionHandler = {
    * Resetting innerHTML will move focus to the beginning of the editor,
    * so we update to force it back to the correct place.
    */
-  resolveComposition: function resolveComposition(editor) {    
+  resolveComposition: function resolveComposition(editor, e) {    
     if (stillComposing) {
       return;
     }
@@ -176,7 +176,6 @@ var DraftEditorCompositionHandler = {
         forceSelection: true
       }));
     }
-
   }
 };
 
